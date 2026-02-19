@@ -1,16 +1,81 @@
-## Hi there 👋
+# Piotr Pedziwiatr  
+**Staff / Principal Software & Systems Engineer – Autonomy, Simulation, AI & Real-Time Systems**
 
-<!--
-**dohtem81/dohtem81** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build software that directly controls physical reality.
 
-Here are some ideas to get you started:
+For the past 18+ years, I have designed and deployed **real-time control systems, industrial automation platforms, AI-driven machine vision, and large-scale data architectures** operating in safety-critical, high-throughput production environments.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+My work lives at the intersection of:
+
+- **Control theory & real-time systems**
+- **Physics-based simulation & modeling**
+- **Autonomy & robotics foundations**
+- **Machine vision & applied AI**
+- **High-reliability production software**
+
+I currently lead multidisciplinary engineering teams building **industrial AI, automation, and data platforms**, while actively developing **simulation and autonomy software** in my personal projects.
+
+---
+
+## 🧠 Core Technical Focus
+
+- Real-time systems & control loops (PID, state estimation, sensor fusion)
+- Physics-based simulation & rigid body dynamics
+- Autonomy & robotics foundations
+- Machine vision & deep learning (TensorFlow, Keras)
+- Distributed systems & data platforms
+- High-throughput telemetry & observability pipelines
+
+**Languages:** C++, Python, C#, SQL  
+**Domains:** Robotics, autonomy, industrial automation, simulation, AI, manufacturing systems  
+
+---
+
+## 🚀 Featured Projects
+
+### **virtDrone — Physics-Based Drone Simulation & Control Platform**
+High-fidelity real-time drone dynamics simulation and flight control modeling.
+
+- Multi-axis rigid-body physics simulation
+- Propulsion & thrust curve modeling
+- Closed-loop PID flight stabilization
+- Sensor modeling and feedback loops
+- Real-time simulation execution
+
+👉 https://github.com/dohtem81/virtDrone
+
+---
+
+### **IONet — Industrial AI & Data Platform Concepts**
+Exploration of real-time industrial telemetry ingestion, analytics, and AI inference pipelines.
+
+- Streaming data ingestion
+- OT → IT data bridging
+- AI integration patterns
+- Real-time visualization architectures
+
+👉 https://github.com/dohtem81/IONet
+
+---
+
+## 🎯 Engineering Philosophy
+
+I specialize in **engineering systems where software meets physics** — environments where:
+
+- Determinism matters  
+- Latency matters  
+- Reliability matters  
+- Observability matters  
+
+These constraints shape how I design architectures, control systems, and simulation environments.
+
+---
+
+## 🔗 Connect
+
+- **GitHub:** https://github.com/dohtem81  
+- **LinkedIn:** https://www.linkedin.com/in/piotr-pedziwiatr  
+
+---
+
+*If you're building autonomy, robotics, simulation, or high-performance real-time systems — let's talk.*
