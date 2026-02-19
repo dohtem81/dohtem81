@@ -1,5 +1,5 @@
 # Piotr Pedziwiatr  
-**Staff / Principal Software & Systems Engineer – Autonomy, Simulation, AI & Real-Time Systems**
+**Software & Systems Engineer – Autonomy, Simulation, AI & Real-Time Systems**
 
 I build software that directly controls physical reality.
 
