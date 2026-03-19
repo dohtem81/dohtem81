@@ -58,8 +58,9 @@ Exploration of real-time industrial telemetry ingestion, analytics, and AI infer
 
 ---
 
-**RiverRaid_2026** (2026)  
+### RiverRaid_2026** (2026)  
 Modern, server-authoritative browser-based remake of the classic 1982 River Raid game.  
+
 Built with FastAPI + WebSocket for realtime gameplay, JWT sessions, PostgreSQL persistence for scores/leaderboards.  
 Features: procedural scrolling river, fuel management + refuel stations, destructible bridges, multi-enemy types (helicopters, tanks, jets), level scaling, missile physics, persistent top-10 leaderboard.  
 Live playable demo: https://riverraid-2026.onrender.com/  
