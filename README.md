@@ -33,6 +33,27 @@ I currently lead multidisciplinary engineering teams building **industrial AI, a
 
 ## 🚀 Featured Projects
 
+### FlightTracker
+
+Real-time distributed flight tracking system with Cassandra backend. Built to explore high-ingest NoSQL patterns using live aircraft data from the OpenSky Network.
+
+## Overview
+
+A clean **write/read split** architecture where multiple collector services ingest aircraft state vectors in parallel and write to a Cassandra cluster, while a dedicated reader service powers an interactive Leaflet web frontend.
+
+The system keeps the latest known state for every aircraft (per ICAO24) and is fully containerized with Docker Compose for one-command deployment.
+
+## Key Features
+
+- Grid-based parallel data collection from OpenSky Network (OAuth2 authenticated)
+- Cassandra cluster optimized for high-write throughput with per-aircraft latest-state model
+- Dedicated read-only FastAPI service serving aircraft positions
+- Responsive Leaflet map UI showing live aircraft markers worldwide
+- Multi-service Docker Compose setup (collectors + 3-node Cassandra + reader + nginx)
+- Clean separation of write and read paths for scalability
+
+👉 https://github.com/dohtem81/FlightTracker
+
 ### **virtDrone — Physics-Based Drone Simulation & Control Platform**
 High-fidelity real-time drone dynamics simulation and flight control modeling.
 
