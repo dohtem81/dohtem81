@@ -112,7 +112,6 @@ Modern, server-authoritative browser-based remake of the classic 1982 River Raid
 
 Built with FastAPI + WebSocket for realtime gameplay, JWT sessions, PostgreSQL persistence for scores/leaderboards.  
 Features: procedural scrolling river, fuel management + refuel stations, destructible bridges, multi-enemy types (helicopters, tanks, jets), level scaling, missile physics, persistent top-10 leaderboard.  
-Live playable demo: https://riverraid-2026.onrender.com/  
 Includes demo gameplay GIF for quick overview.  
 
 👉 https://github.com/dohtem81/riverraid_2026
