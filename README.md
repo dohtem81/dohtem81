@@ -58,6 +58,18 @@ Exploration of real-time industrial telemetry ingestion, analytics, and AI infer
 
 ---
 
+### **Prism — Experimental Systems & Tooling**
+Focused software project exploring reusable patterns for modern engineering workflows and system-level experimentation.
+
+- Modular architecture
+- Tooling and experimentation
+- Rapid prototyping
+- Practical engineering patterns
+
+👉 https://github.com/dohtem81/prism
+
+---
+
 **RiverRaid_2026** (2026)  
 Modern, server-authoritative browser-based remake of the classic 1982 River Raid game.  
 Built with FastAPI + WebSocket for realtime gameplay, JWT sessions, PostgreSQL persistence for scores/leaderboards.  
