@@ -1,153 +1,95 @@
-# Piotr Pedziwiatr  
-**Software & Systems Engineer – Autonomy, Simulation, AI & Real-Time Systems**
+# Piotr Pedziwiatr
 
-I build software that directly controls physical reality.
+**Engineering Leader · Real-Time Systems · Industrial AI · Autonomy**
 
-For the past 18+ years, I have designed and deployed **real-time control systems, industrial automation platforms, AI-driven machine vision, and large-scale data architectures** operating in safety-critical, high-throughput production environments.
+I lead multidisciplinary engineering teams building industrial AI, automation, and data platforms — and I stay close to the technical work.
 
-My work lives at the intersection of:
-
-- **Control theory & real-time systems**
-- **Physics-based simulation & modeling**
-- **Autonomy & robotics foundations**
-- **Machine vision & applied AI**
-- **High-reliability production software**
-
-I currently lead multidisciplinary engineering teams building **industrial AI, automation, and data platforms**, while actively developing **simulation and autonomy software** in my personal projects.
+For 18+ years I’ve designed and shipped **real-time control systems, machine vision, physics-based simulation, and high-reliability production software** in safety-critical environments. My focus sits at the intersection of software, physics, and operational reality.
 
 ---
 
-## 🧠 Core Technical Focus
+## What I Care About
 
-- Real-time systems & control loops (PID, state estimation, sensor fusion)
-- Physics-based simulation & rigid body dynamics
-- Autonomy & robotics foundations
-- Machine vision & deep learning (TensorFlow, Keras)
-- Distributed systems & data platforms
-- High-throughput telemetry & observability pipelines
+- Systems where latency, determinism, and reliability actually matter
+- Clean service boundaries and graceful degradation under failure
+- Making complex technical decisions understandable to teams and stakeholders
+- Keeping technical judgment sharp while leading people and delivery
 
 **Languages:** C++, Python, C#, SQL  
-**Domains:** Robotics, autonomy, industrial automation, simulation, AI, manufacturing systems  
+**Domains:** Real-time systems, industrial automation, autonomy & robotics, machine vision, distributed data platforms
 
 ---
 
-## 🚀 Featured Projects
+## Featured Work
 
-### AISprinkler — Safety-First Local LLM Agent for Smart Irrigation
+### Prism — Real-Time Multilingual Chat Platform
+Server-side translation that never blocks the conversation.
 
-**AISprinkler** is a personal portfolio project exploring how Large Language Models can be used responsibly in **real-world physical control systems**.
+Messages are delivered immediately. Translation runs asynchronously via a decoupled worker and is pushed live as an update. When the LLM provider is unavailable, the original message stays fully usable and the status is surfaced to clients.
 
-Instead of treating the LLM as a black-box suggestion engine, this project implements a **hybrid deterministic + probabilistic architecture**:
-- Hard safety and policy rules (stored in `PROMPTS_AND_RULES.md`) always take precedence.
-- A local LLM (via Ollama) generates intelligent 24-hour irrigation schedule adjustments based on weather data and baseline schedules.
-- Every recommendation includes a **confidence score**. Changes above a threshold (e.g. 85) can be auto-applied; lower-confidence suggestions trigger review and guarded retry logic.
+**Highlights**
+- FastAPI + WebSocket + Celery + RabbitMQ + PostgreSQL + Redis
+- Graceful degradation, DLQ, rate limiting, quotas, and abuse protection
+- Admin metrics (latency, cost, success rates) + structured logging + lightweight distributed tracing
+- Docker-first, clean architecture, extensive design documentation
 
-#### Key Highlights
-- **Local-first design** — Fully supports Ollama (no paid API required). Currently tested with Llama 3.2 / Qwen3 models.
-- **Strong traceability & auditability** — Every LLM call, input context, raw response, confidence score, and final decision is logged with prompt versioning for full replay and governance.
-- **Confidence-gated actuation** with deterministic rule enforcement before any physical action.
-- Modern, production-minded stack: **FastAPI + Celery + PostgreSQL + Redis + Docker Compose**, with clean architecture and extensive design documentation.
-
-#### Why This Project Matters
-Most LLM portfolio projects are simple chat interfaces or RAG systems. AISprinkler demonstrates a more ambitious pattern: using a local LLM as a **cautious reasoning layer** inside a safety-critical loop — similar to approaches used in robotics and autonomous systems, but applied to everyday home automation (smart sprinkler control).
-
-This project grew out of a real pain point: manually managing my yard irrigation schedule. It serves as a practical experiment in making LLM-driven decisions reliable, explainable, and safe for the physical world.
-
-**Status**: Concept & scaffolding phase — strong architecture and documentation complete, core LLM integration with Ollama in progress.
-
-**Tech Stack**: Python, FastAPI, LangChain, Ollama, PostgreSQL, Redis, Celery, Docker
-
-👉 https://github.com/dohtem81/AISprinkler
+👉 [github.com/dohtem81/prism](https://github.com/dohtem81/prism)
 
 ---
 
-### FlightTracker
+### AISprinkler — Safety-First Local LLM for Physical Control
+Exploring how LLMs can sit inside real-world control loops without becoming a liability.
 
-Real-time distributed flight tracking system with Cassandra backend. Built to explore high-ingest NoSQL patterns using live aircraft data from the OpenSky Network.
+Hybrid architecture: hard deterministic safety rules always win. A local LLM (Ollama) proposes schedule adjustments with confidence scores. High-confidence changes can be applied; lower-confidence ones require review. Full audit trail of every prompt, response, and decision.
 
-A clean **write/read split** architecture where multiple collector services ingest aircraft state vectors in parallel and write to a Cassandra cluster, while a dedicated reader service powers an interactive Leaflet web frontend.
+**Why it matters**  
+Most LLM demos are chat or RAG. This one treats the model as a cautious reasoning layer inside a safety-critical actuation path.
 
-The system keeps the latest known state for every aircraft (per ICAO24) and is fully containerized with Docker Compose for one-command deployment.
-
-#### Key Features
-
-- Grid-based parallel data collection from OpenSky Network (OAuth2 authenticated)
-- Cassandra cluster optimized for high-write throughput with per-aircraft latest-state model
-- Dedicated read-only FastAPI service serving aircraft positions
-- Responsive Leaflet map UI showing live aircraft markers worldwide
-- Multi-service Docker Compose setup (collectors + 3-node Cassandra + reader + nginx)
-- Clean separation of write and read paths for scalability
-
-👉 https://github.com/dohtem81/FlightTracker
+👉 [github.com/dohtem81/AISprinkler](https://github.com/dohtem81/AISprinkler)
 
 ---
 
-### **virtDrone — Physics-Based Drone Simulation & Control Platform**
-High-fidelity real-time drone dynamics simulation and flight control modeling.
+### FlightTracker — High-Ingest Real-Time Aircraft Tracking
+Write/read split architecture using live OpenSky Network data and Cassandra.
 
-- Multi-axis rigid-body physics simulation
-- Propulsion & thrust curve modeling
-- Closed-loop PID flight stabilization
-- Sensor modeling and feedback loops
-- Real-time simulation execution
+Multiple collectors ingest in parallel; a dedicated reader serves a live Leaflet map. Designed for high write throughput and clean separation of concerns. Fully containerized.
 
-👉 https://github.com/dohtem81/virtDrone
+👉 [github.com/dohtem81/FlightTracker](https://github.com/dohtem81/FlightTracker)
 
 ---
 
-### **IONet — Industrial AI & Data Platform Concepts**
-Exploration of real-time industrial telemetry ingestion, analytics, and AI inference pipelines.
+### virtDrone — Physics-Based Drone Simulation & Control
+Real-time rigid-body dynamics, thrust modeling, closed-loop PID stabilization, and sensor feedback loops.
 
-- Streaming data ingestion
-- OT → IT data bridging
-- AI integration patterns
-- Real-time visualization architectures
-
-👉 https://github.com/dohtem81/IONet
+👉 [github.com/dohtem81/virtDrone](https://github.com/dohtem81/virtDrone)
 
 ---
 
-### **Prism — Experimental Systems & Tooling**
-Focused software project exploring reusable patterns for modern engineering workflows and system-level experimentation.
+### IONet — Industrial Telemetry & AI Concepts
+Patterns for streaming OT→IT data, real-time analytics, and AI inference in industrial environments.
 
-- Modular architecture
-- Tooling and experimentation
-- Rapid prototyping
-- Practical engineering patterns
-
-👉 https://github.com/dohtem81/prism
+👉 [github.com/dohtem81/IONet](https://github.com/dohtem81/IONet)
 
 ---
 
-### RiverRaid_2026** (2026)  
-Modern, server-authoritative browser-based remake of the classic 1982 River Raid game.  
+## Engineering Philosophy
 
-Built with FastAPI + WebSocket for realtime gameplay, JWT sessions, PostgreSQL persistence for scores/leaderboards.  
-Features: procedural scrolling river, fuel management + refuel stations, destructible bridges, multi-enemy types (helicopters, tanks, jets), level scaling, missile physics, persistent top-10 leaderboard.  
-Includes demo gameplay GIF for quick overview.  
-
-👉 https://github.com/dohtem81/riverraid_2026
-
----
-
-## 🎯 Engineering Philosophy
-
-I specialize in **engineering systems where software meets physics** — environments where:
+I design systems where software meets the physical world:
 
 - Determinism matters  
 - Latency matters  
 - Reliability matters  
 - Observability matters  
 
-These constraints shape how I design architectures, control systems, and simulation environments.
+These constraints shape architecture decisions, team practices, and what “done” actually means.
 
 ---
 
-## 🔗 Connect
+## Connect
 
-- **GitHub:** https://github.com/dohtem81  
-- **LinkedIn:** https://www.linkedin.com/in/piotr-pedziwiatr  
+- GitHub: [github.com/dohtem81](https://github.com/dohtem81)  
+- LinkedIn: [linkedin.com/in/piotr-pedziwiatr](https://www.linkedin.com/in/piotr-pedziwiatr)
 
 ---
 
-*If you're building autonomy, robotics, simulation, or high-performance real-time systems — let's talk.*
+*Building autonomy, industrial AI, or high-reliability real-time systems? Let’s talk.*
